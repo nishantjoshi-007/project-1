@@ -3,6 +3,7 @@ from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
 import pandas as pd
+from dash import Dash
 import plotly.express as px
 
 # Load your data
@@ -10,7 +11,7 @@ df = pd.read_csv('./heart2022.csv')
 #external_stylesheets = ['./assets/app.css']
 #, external_stylesheets=external_stylesheets
 
-app = dash.Dash(__name__)
+app = Dash(__name__)
 server = app.server
 
 app.layout = html.Div([
