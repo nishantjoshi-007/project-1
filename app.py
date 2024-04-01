@@ -6,10 +6,11 @@ import pandas as pd
 import plotly.express as px
 
 # Load your data
-df = pd.read_csv('heart2022.csv')
-external_stylesheets = ['assets/app.css']
+df = pd.read_csv('./heart2022.csv')
+#external_stylesheets = ['./assets/app.css']
+#, external_stylesheets=external_stylesheets
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__)
 server = app.server
 
 app.layout = html.Div([
